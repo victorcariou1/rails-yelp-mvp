@@ -1,0 +1,13 @@
+<h1><%= @restaurant.name %></h1>
+<p>Adresse: <%= @restaurant.address %></p>
+<p>Téléphone: <%= @restaurant.phone_number %></p>
+<p>Catégorie: <%= @restaurant.category %></p>
+
+<h2>Avis</h2>
+<ul>
+  <% @reviews.each do |review| %>
+    <li>Note: <%= review.rating %> - <%= review.content %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Ajouter un avis', new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>

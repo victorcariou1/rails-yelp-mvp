@@ -1,0 +1,12 @@
+<h1>Nouveau Restaurant</h1>
+<%= form_with model: @restaurant, local: true do |form| %>
+  <%= form.label :name, "Nom" %>
+  <%= form.text_field :name %>
+  <%= form.label :address, "Adresse" %>
+  <%= form.text_field :address %>
+  <%= form.label :phone_number, "Numéro de téléphone" %>
+  <%= form.text_field :phone_number %>
+  <%= form.label :category, "Catégorie" %>
+  <%= form.select :category, ['chinese', 'italian', 'japanese', 'french', 'belgian'] %>
+  <%= form.submit "Créer" %>
+<% end %>
